@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.asherelgar.myfinalproject.fragments.AddShoppingListDialog">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#88795b29"
+        android:padding="8dp"
+        android:src="@drawable/add_profile" />
+
+    <EditText
+        android:id="@+id/etListTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:hint="שם הרשימה..."
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etListTitle"
+        android:background="#edb845"
+        android:text="סיימתי"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.asherelgar.myfinalproject.fragments.ContactFragment">
+
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="60dp"
+        android:background="#e8dad3b8"
+        android:ems="10"
+        android:hint="Name..."
+        android:inputType="textPersonName"
+        android:padding="8dp"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etName"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="#e8dad3b8"
+        android:ems="10"
+        android:hint="Email..."
+        android:inputType="textEmailAddress"
+        android:padding="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/etName"
+        app:layout_constraintRight_toRightOf="@+id/etName"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+    <EditText
+        android:id="@+id/etMessage"
+        android:layout_width="0dp"
+        android:layout_height="177dp"
+        android:layout_below="@+id/etEmail"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="40dp"
+        android:background="#e8dad3b8"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="Message..."
+        android:inputType="textMultiLine"
+        android:maxLines="5"
+        android:padding="8dp"
+        android:scrollHorizontally="false"
+        android:singleLine="false"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/etEmail"
+        app:layout_constraintRight_toRightOf="@+id/etEmail"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+
+    <com.dd.processbutton.iml.ActionProcessButton
+        android:id="@+id/btnSignIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Send"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/etMessage"
+        app:layout_constraintStart_toStartOf="@+id/etMessage"
+        app:layout_constraintTop_toBottomOf="@+id/etMessage"
+        app:pb_colorComplete="@color/green_complete"
+        app:pb_colorError="@color/red_error"
+        app:pb_colorNormal="@color/bootstrap_alert_cross_default"
+        app:pb_colorPressed="@color/bootstrap_brand_danger"
+        app:pb_colorProgress="@color/purple_progress"
+        app:pb_textComplete="Success"
+        app:pb_textError="Error"
+        app:pb_textProgress="Loading" />
+
+</android.support.constraint.ConstraintLayout>

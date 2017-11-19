@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/news"
+            android:title="NEWS" />
+        <item
+            android:id="@+id/nav_alcohol"
+            android:icon="@drawable/alcohol"
+            android:title="FOOD" />
+        <item
+            android:id="@+id/nav_music"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="MUSIC" />
+
+        <item
+            android:id="@+id/nav_send"
+            android:icon="@drawable/footprints"
+            android:title="STEP COUNTER" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_cloud"
+            android:title="WEATHER" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_manage"
+                android:icon="@drawable/phone_icon"
+                android:title="Contact Us" />
+        </menu>
+    </item>
+
+</menu>

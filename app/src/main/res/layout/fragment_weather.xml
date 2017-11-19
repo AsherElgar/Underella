@@ -1,0 +1,177 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:backgroundTint="#d22b5563"
+    tools:context=".MainActivity">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/weatherCon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
+
+
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/clouds_back" />
+
+        <TextView
+            android:id="@+id/tvTemp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:maxLength="4"
+            android:paddingRight="16dp"
+            android:text="28.5"
+            android:textAlignment="textEnd"
+            android:textColor="#fff"
+            android:textSize="55sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="@+id/ivWeather"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivWeather"
+            app:layout_constraintVertical_bias="0.444" />
+
+        <TextView
+            android:id="@+id/tvSunset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            android:text="Very Cloudy"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="36sp"
+            android:textStyle="bold|italic"
+            android:typeface="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivWeather"
+            app:layout_constraintVertical_bias="0.23000002" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivWeather"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="118dp"
+            android:layout_marginTop="45dp"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextView"
+            app:srcCompat="@drawable/weather_icon" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-condensed"
+            android:padding="8dp"
+            android:text="IL, Tel-Aviv"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textDirection="ltr"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            android:typeface="serif"
+            app:layout_constraintBottom_toTopOf="@+id/imageViewLocation"
+            app:layout_constraintEnd_toEndOf="@+id/tvSunset"
+            app:layout_constraintLeft_toLeftOf="@+id/tvSunset"
+            app:layout_constraintTop_toBottomOf="@+id/tvSunset"
+            app:layout_constraintVertical_bias="0.52" />
+
+        <ImageView
+            android:id="@+id/imageViewLocation"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="h,1:1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@drawable/ic_my_location" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/cpb_white"
+            android:ems="10"
+            android:hint="Please enter place..."
+            android:textColor="@color/cpb_white"
+            android:textColorHint="@color/cpb_white"
+            app:layout_constraintEnd_toStartOf="@+id/ivSearchWeather"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <requestFocus />
+
+        </AutoCompleteTextView>
+
+        <!--<EditText-->
+        <!--android:id="@+id/etSearchWeather"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:ems="10"-->
+        <!--android:textColor="#fff"-->
+        <!--android:backgroundTint="@color/bootstrap_alert_cross_default"-->
+        <!--android:hint="Weather Location..."-->
+        <!--android:textColorHint="#fff"-->
+        <!--android:inputType="textPersonName"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:layout_constraintRight_toLeftOf="@+id/ivSearchWeather"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--app:layout_constraintHorizontal_bias="0.0" />-->
+
+        <ImageView
+            android:id="@+id/ivSearchWeather"
+            android:layout_width="0dp"
+            android:layout_height="39dp"
+
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/autoCompleteTextView"
+            app:srcCompat="@android:drawable/ic_menu_search" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardViewItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:backgroundTint="#d4313030"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/linearItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/conLay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.like.LikeButton
+                android:id="@+id/btnLike"
+                android:layout_width="20dp"
+                android:layout_height="19dp"
+                android:layout_gravity="top|left"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                app:anim_scale_factor="2"
+                app:circle_end_color="@color/colorAccent"
+                app:circle_start_color="@color/colorPrimary"
+                app:dots_primary_color="@color/colorAccent"
+                app:dots_secondary_color="@color/colorPrimary"
+                app:icon_size="35dp"
+                app:icon_type="heart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="@+id/tvDurationSong"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDurationSong"
+                app:like_drawable="@drawable/heart_on"
+                app:unlike_drawable="@drawable/heart_off" />
+
+            <TextView
+                android:id="@+id/tvNameSong"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="TextView"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintLeft_toRightOf="@+id/youtube"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDurationSong"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="right"
+                android:text="TextView"
+                android:textColor="#fff"
+                android:visibility="invisible"
+                app:layout_constraintLeft_toLeftOf="@+id/tvNameSong"
+                app:layout_constraintRight_toRightOf="@+id/tvNameSong"
+                app:layout_constraintTop_toBottomOf="@+id/tvNameSong" />
+
+            <ImageView
+                android:id="@+id/youtube"
+                android:layout_width="200dp"
+                android:layout_height="110dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_menu_camera"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+            </ImageView>
+
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="8dp"
+    android:visibility="visible"
+    app:cardCornerRadius="10dp">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#da050505">
+
+        <com.beardedhen.androidbootstrap.BootstrapThumbnail
+            android:id="@+id/ivAlcoImg"
+            android:layout_width="120dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/ic_menu_camera"
+            app:bootstrapBrand="regular"
+            app:hasBorder="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="h,1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/tvTitleAlco"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="6dp"
+            android:text="מבודדת: חברות תעופה ערביות מפסיקות את הטיסות לקטאר"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ivAlcoImg"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/ivAlcoImg"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivAlcoImg"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:text='מחריף המשבר הדיפלומטי בעולם הערבי: חברת התעופה "סעודיה" וחברות התעופה "אמירטס", "איתיחאד" ו"פליי דובאי" מאיחוד האמירויות מפסיקות לטוס לנסיכות העשירה. זאת בעקבות החלטת סעודיה, מצרים, איחוד האמירויות, בחריין, תימן ולוב לנתק היחסים עם קטאר בשל "תמיכתה בטרור'
+            android:textColor="#fff"
+            app:layout_constraintBottom_toBottomOf="@+id/ivAlcoImg"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/ivAlcoImg"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleAlco"
+            app:layout_constraintVertical_bias="0.0" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
